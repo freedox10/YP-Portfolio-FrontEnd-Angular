@@ -40,6 +40,7 @@
 				</svg>
 			</a>
   		</div>
-  		<button type="button" class="btn btn-success">Acceso</button>
+  		<button *ngIf="loginShow" type="button" class="btn btn-success">Acceso</button>
+  		<button *ngIf="!loginShow" type="button" class="btn btn-primary">Salir</button>
 	</div>
 </nav>

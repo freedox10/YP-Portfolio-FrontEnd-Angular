@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class BannerComponent {
   name: string = 'Mi Banner';
-  urlImg: string = '../../../assets/img/Capibara2.webp';
-  photo: string = `url('${this.urlImg}')`;
+  urlImg: string = '../../../assets/img/banner1.jpg';
+  photo: string = 'url(' + this.urlImg + ')';
 }
