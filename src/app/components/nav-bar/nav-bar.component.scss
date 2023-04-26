@@ -1,6 +1,14 @@
 .navbar-container {
+	background-image: linear-gradient(to right, black , white);
 	padding: 2rem 3rem;
 }
+
+.navbar-left {
+	a:link {color:#ffffff;}
+	a:visited {color:#ffffff;}
+	a:active {color:#ffffff;}
+	a:hover {color:#000000;}
+	}
 
 .navbar-right {
 	.social {
