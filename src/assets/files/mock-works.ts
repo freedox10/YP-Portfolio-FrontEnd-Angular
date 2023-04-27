@@ -25,6 +25,4 @@ export const WORKS: WorkModel[] = [
       "urlImage": "../../../assets/img/experiencia.png",
       "description": "Me encanta ese trabajo igual que los otros"
     }
-
-
   ];
