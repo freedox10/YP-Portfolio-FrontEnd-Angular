@@ -13,6 +13,10 @@ export class WorkListService {
   // works: WorkModel[] = WORKS;
   private worksUrl = 'api/works'
 
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
+
   constructor(private http: HttpClient) { }
 
   /**
@@ -45,5 +49,13 @@ export class WorkListService {
         this.handleError<WorkModel[]>('getWorks', [])
       )
     );
+  }
+
+  add(workAdd: WorkModel) {
+    // this.works.push(workAdd);
+    return this.http.post<WorkModel>(this.worksUrl, workAdd, this.httpOptions).pipe(
+      tap((newWork: WorkModel) => console.log(newWork.title)),
+      catchError(this.handleError<WorkModel>('addWork'))
+      )
   }
 }
