@@ -23,7 +23,7 @@ export class ExperienceComponent implements OnInit {
     this.workListService.getWorks().subscribe((workList) => { this.workList = workList });
   }
 
-  addWork() {
+  addWork(): void {
     let newId: number = this.workList.length + 1
     const newWork: WorkModel = {
       id: newId,
@@ -35,5 +35,10 @@ export class ExperienceComponent implements OnInit {
     .subscribe((work: WorkModel) => {
       this.workList.push(work);
     });
+  }
+
+  removeWorkToList(workToRemove: WorkModel): void {
+    this.workListService.remove(workToRemove.id).subscribe();
+    this.getWorkList();
   }
 }

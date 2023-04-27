@@ -64,7 +64,7 @@ export class WorkListService {
 
     return this.http.delete<WorkModel>(url, this.httpOptions).pipe(
       tap(() => console.log(`delete work id=${id}`)),
-      catchError(this.handleError<WorkModel>(`deleteHero`))
+      catchError(this.handleError<WorkModel>(`deleteWork`))
     );
   }
 }
