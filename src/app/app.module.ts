@@ -16,6 +16,10 @@ import { DeleteComponent } from './components/delete/delete.component';
 import { EditComponent } from './components/edit/edit.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EducationComponent } from './components/education/education.component';
+import { SkillComponent } from './components/skill/skill.component';
+import { ProyectComponent } from './components/proyect/proyect.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ExperienceComponent,
     WorkComponent,
     DeleteComponent,
-    EditComponent
+    EditComponent,
+    EducationComponent,
+    SkillComponent,
+    ProyectComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +46,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
       InMemoryDataService, { dataEncapsulation: false }
     ),
     NgbModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]
