@@ -37,4 +37,20 @@
 			color: #444444;
 		}
 	}
+	.btn {
+		border-width: medium;
+	}
 }
+
+/*---- Para la vista de Celular
+@media (max-width: 575px) {
+	.navbar-container {
+		flex-direction: column;
+	}
+	.navbar-right {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+----*/
